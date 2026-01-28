@@ -4,8 +4,11 @@ export function parseQuestions() {
 
 export function parseLine(line) {
   const split = line.split(',');
-  // TODO mappa categoryNumber í streng svk skölun
-  // og ákveða formatið á gögnunum
+
+  if(split.length !== 6) {
+    return null;
+  }
+
   const catergoryNumber = split[0];
   const subCategory = split[1];
   const difficulty = split[2];
