@@ -2,10 +2,11 @@ export function generateIndexHtml() {
   const html = /* HTML */ ` <html>
     <head>
       <script src="scripts.js" type="module"></script>
+      <link rel="stylesheet" href="styles.css">
     </head>
     <body>
       <h1>Spurningaleikur!</h1>
-      <p>Velkomin velkomin! Veldu flokk til að svara spurningum í:</p>
+      <p>Velkomin! Hér eru bestu spurningarnar sem ég get boðið upp á. Veldu flokkinn sem þú vilt svara.</p>
       <ul>
         <li><a href="almennt.html">Almenn kunnátta</a></li>
         <li><a href="nattura.html">Náttúra og vísindi</a></li>
@@ -26,8 +27,8 @@ export function generateQuestionHtml(q) {
     <h3>${q.question}</h3>
     <p class = "answer" hidden>${q.answer}</p>
     <button type="button" class="button button-toggle-answer">Sýna svar</button>
-    <button type="button" class="button button-correct">Rétt 🫡</button>
-    <button type="button" class="button button-incorrect">Rangt 🥹</button>
+    <button type="button" class="button button-correct" hidden>Rétt 🫡</button>
+    <button type="button" class="button button-incorrect" hidden>Rangt 🥹</button>
   </section>`;
 
   return html;
@@ -38,10 +39,11 @@ export function generateQuestionCategoryHtml(title, questionsHtml) {
     <html>
       <head>
         <script src="scripts.js" type="module"></script>
+        <link rel="stylesheet" href="styles.css">
       </head>
       <body>
         <h1>Spurningaleikur!</h1>
-        <p><a href="index.html">Til baka</a></p>
+        <p><a href="index.html" class="back-button">Til baka</a></p>
         <div class="counter">
           <div class="correct">0</div>
           <div class="incorrect">0</div>

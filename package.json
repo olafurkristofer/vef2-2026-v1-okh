@@ -16,7 +16,7 @@
     "lint": "eslint",
     "test": "node --test --experimental-test-module-mocks",
     "test:watch": "node --test --watch --experimental-test-module-mocks",
-    "test:coverage": "node --test --experimental-test-coverage --experimental-test-module-mocks"
+    "test:coverage": "node --test --experimental-test-coverage"
   },
   "keywords": [],
   "author": "",

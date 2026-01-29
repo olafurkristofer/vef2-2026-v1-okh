@@ -1,7 +1,3 @@
-export function parseQuestions() {
-  return 'test';
-}
-
 export function parseLine(line) {
   const split = line.split(',');
 

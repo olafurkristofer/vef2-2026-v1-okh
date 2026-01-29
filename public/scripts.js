@@ -56,11 +56,17 @@ function toggleAnswerHandler(e) {
   const answerEl = questionEl.querySelector('.answer');
   if (!answerEl) return;
 
+  const correctButton = questionEl.querySelector('.button.button-correct');
+  const incorrectButton = questionEl.querySelector('.button.button-incorrect');
+
   const isHidden = answerEl.hasAttribute('hidden');
 
   if (isHidden) {
     answerEl.removeAttribute('hidden');
     button.textContent = 'Fela svar';
+
+    correctButton.removeAttribute('hidden');
+    incorrectButton.removeAttribute('hidden');
   } else {
     answerEl.setAttribute('hidden', '');
     button.textContent = 'Sýna svar';
