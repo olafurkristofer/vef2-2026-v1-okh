@@ -9,7 +9,7 @@ export function parseLine(line) {
     return null;
   }
 
-  const catergoryNumber = split[0];
+  const categoryNumber = split[0];
   const subCategory = split[1];
   const difficulty = split[2];
   const quality = split[3];
@@ -17,7 +17,7 @@ export function parseLine(line) {
   const answer = split[5];
 
   const q = {
-    catergoryNumber,
+    categoryNumber,
     subCategory,
     difficulty,
     quality,
