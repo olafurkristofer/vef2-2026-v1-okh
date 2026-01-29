@@ -7,7 +7,13 @@ export function generateIndexHtml() {
       <h1>Spurningaleikur!</h1>
       <p>Velkomin velkomin! Veldu flokk til að svara spurningum í:</p>
       <ul>
+        <li><a href="almennt.html">Almenn kunnátta</a></li>
+        <li><a href="nattura.html">Náttúra og vísindi</a></li>
+        <li><a href="bokmenntir.html">Bókmenntir og listir</a></li>
         <li><a href="saga.html">Saga</a></li>
+        <li><a href="landafraedi.html">Landafræði</a></li>
+        <li><a href="skemmtun.html">Skemmtun og afþreying</a></li>
+        <li><a href="ithrottir.html">Íþróttir og tómstundir</a></li>
       </ul>
     </body>
   </html>`;
@@ -18,7 +24,8 @@ export function generateIndexHtml() {
 export function generateQuestionHtml(q) {
   const html = /* HTML */ ` <section class="question" data-answered="false">
     <h3>${q.question}</h3>
-    <p>${q.answer}</p>
+    <p class = "answer" hidden>${q.answer}</p>
+    <button type="button" class="button button-toggle-answer">Sýna svar</button>
     <button type="button" class="button button-correct">Rétt 🫡</button>
     <button type="button" class="button button-incorrect">Rangt 🥹</button>
   </section>`;
